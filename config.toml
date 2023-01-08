@@ -1,4 +1,4 @@
-baseURL = "https://muratunalphd.com/"
+baseURL = "https://muratunalphd.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Murat Unal"

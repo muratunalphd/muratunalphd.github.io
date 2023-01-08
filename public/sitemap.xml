@@ -2,28 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://muratunalphd.com/tags/1-click/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://muratunalphd.com/blog/ipw-intuition/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunalphd.com/categories/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://muratunalphd.com/tags/causal-inference/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://muratunalphd.com/categories/causal-inference/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunalphd.com/tags/causal-machine-learning/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunalphd.com/categories/causal-machine-learning/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunalphd.com/project/fewer-clicks-more-purchases/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunalphd.com/blog/</loc>
@@ -35,16 +20,22 @@
     <loc>https://muratunalphd.com/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://muratunalphd.com/project/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+    <loc>https://muratunalphd.com/tags/causal-inference/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://muratunalphd.com/categories/research/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunalphd.com/tags/</loc>
-    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+    <loc>https://muratunalphd.com/tags/causal-machine-learning/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunalphd.com/tags/e-commerce/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunalphd.com/project/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunalphd.com/categories/research/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunalphd.com/tags/</loc>
     <lastmod>2022-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunalphd.com/project/impact-of-online-product-sampling/</loc>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portfolio on Murat Unal</title>
-    <link>https://muratunal.netlify.app/project/</link>
-    <description>Recent content in Portfolio on Murat Unal</description>
+    <title>causal machine learning on Murat Unal</title>
+    <link>https://muratunal.netlify.app/tags/causal-machine-learning/</link>
+    <description>Recent content in causal machine learning on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunal.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunal.netlify.app/tags/causal-machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fewer Clicks, More Purchases</title>
       <link>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</link>
@@ -23,15 +23,6 @@
       
       <guid>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</guid>
       <description>In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.</description>
-    </item>
-    
-    <item>
-      <title>NBA 6921: Machine Learning Applications in Business</title>
-      <link>https://muratunal.netlify.app/project/teaching/</link>
-      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://muratunal.netlify.app/project/teaching/</guid>
-      <description>Course description This course introduces students to machine learning techniques used in business applications to draw managerial insights from data using R.</description>
     </item>
     
   </channel>

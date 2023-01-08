@@ -19,5 +19,14 @@ Create Campaign Data Both stores have same number of members. We can get an unbi
 Run Simulation Plot Results </description>
     </item>
     
+    <item>
+      <title>The Impact of Online Product Sampling on Customer Behavior</title>
+      <link>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</guid>
+      <description>In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.</description>
+    </item>
+    
   </channel>
 </rss>

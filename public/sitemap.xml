@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://muratunal.netlify.app/tags/1-click/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://muratunal.netlify.app/blog/ipw-intuition/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunal.netlify.app/categories/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://muratunal.netlify.app/tags/causal-inference/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://muratunal.netlify.app/categories/causal-inference/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/tags/causal-machine-learning/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/categories/causal-machine-learning/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunal.netlify.app/blog/</loc>
@@ -20,6 +35,21 @@
     <loc>https://muratunal.netlify.app/</loc>
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://muratunal.netlify.app/project/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/categories/research/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/tags/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/tags/e-commerce/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</loc>
+    <lastmod>2022-12-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://muratunal.netlify.app/tags/machine-learning/</loc>
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,12 +60,6 @@
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunal.netlify.app/project/teaching/</loc>
-    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunal.netlify.app/project/</loc>
-    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://muratunal.netlify.app/tags/</loc>
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://muratunal.netlify.app/contact/</loc>

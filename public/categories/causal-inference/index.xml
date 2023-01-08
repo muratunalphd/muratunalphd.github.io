@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Causal Inference on Murat Unal</title>
-    <link>https://muratunal.netlify.app/categories/causal-inference/</link>
+    <link>https://muratunalphd.com/categories/causal-inference/</link>
     <description>Recent content in Causal Inference on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunal.netlify.app/categories/causal-inference/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/causal-inference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference</title>
-      <link>https://muratunal.netlify.app/blog/ipw-intuition/</link>
+      <link>https://muratunalphd.com/blog/ipw-intuition/</link>
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://muratunal.netlify.app/blog/ipw-intuition/</guid>
+      <guid>https://muratunalphd.com/blog/ipw-intuition/</guid>
       <description>One mistake I come across repeatedly in campaign measurement is the following:
 Let&amp;rsquo;s suppose When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 Create Campaign Data Both stores have same number of members. We can get an unbiased estimate of the population mean spending among customers if the number of treated is the same in both stores.
@@ -21,10 +21,10 @@ Run Simulation Plot Results </description>
     
     <item>
       <title>The Impact of Online Product Sampling on Customer Behavior</title>
-      <link>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</link>
+      <link>https://muratunalphd.com/project/impact-of-online-product-sampling/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</guid>
+      <guid>https://muratunalphd.com/project/impact-of-online-product-sampling/</guid>
       <description>In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.</description>
     </item>
     

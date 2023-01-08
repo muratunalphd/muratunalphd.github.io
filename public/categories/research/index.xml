@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on Murat Unal</title>
-    <link>https://muratunal.netlify.app/categories/research/</link>
+    <link>https://muratunalphd.com/categories/research/</link>
     <description>Recent content in Research on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunal.netlify.app/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fewer Clicks, More Purchases</title>
-      <link>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</link>
+      <link>https://muratunalphd.com/project/fewer-clicks-more-purchases/</link>
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</guid>
+      <guid>https://muratunalphd.com/project/fewer-clicks-more-purchases/</guid>
       <description>We study how introducing a one-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.</description>
     </item>
     
     <item>
       <title>The Impact of Online Product Sampling on Customer Behavior</title>
-      <link>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</link>
+      <link>https://muratunalphd.com/project/impact-of-online-product-sampling/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://muratunal.netlify.app/project/impact-of-online-product-sampling/</guid>
+      <guid>https://muratunalphd.com/project/impact-of-online-product-sampling/</guid>
       <description>In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.</description>
     </item>
     

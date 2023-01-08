@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1-click on Murat Unal</title>
-    <link>https://muratunal.netlify.app/tags/1-click/</link>
+    <link>https://muratunalphd.com/tags/1-click/</link>
     <description>Recent content in 1-click on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunal.netlify.app/tags/1-click/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/tags/1-click/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fewer Clicks, More Purchases</title>
-      <link>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</link>
+      <link>https://muratunalphd.com/project/fewer-clicks-more-purchases/</link>
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://muratunal.netlify.app/project/fewer-clicks-more-purchases/</guid>
+      <guid>https://muratunalphd.com/project/fewer-clicks-more-purchases/</guid>
       <description>We study how introducing a one-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.</description>
     </item>
     

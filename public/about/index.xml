@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Murat Unal</title>
-    <link>https://muratunal.netlify.app/about/</link>
+    <link>https://muratunalphd.com/about/</link>
     <description>Recent content in About on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://muratunal.netlify.app/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://muratunalphd.com/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

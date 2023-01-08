@@ -10,7 +10,7 @@ images:
 show_action_link: true
 show_social_links: true
 subtitle: Economist @ Amazon
-text_align_left: false
+text_align_left: true
 title: Murat Unal, Ph.D.
 type: home
 ---

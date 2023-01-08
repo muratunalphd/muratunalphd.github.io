@@ -33,7 +33,7 @@ enableEmoji = true
   description = ""
   favicon = "/img/favicon.ico"
   logo = ""
-  mainSections = ["blog", "project",]
+  mainSections = []
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -96,7 +96,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://linkedin.com/muratunalphd/"
+      url       = "https://www.linkedin.com/in/muratunalphd/"
  
 [taxonomies]
   category = "categories"

@@ -30,4 +30,4 @@ links:
 
 ## Course description
 
-This course introduces students to machine learning techniques used in business applications to draw managerial insights from data.
+This course introduces students to machine learning techniques used in business applications to draw managerial insights from data using R.

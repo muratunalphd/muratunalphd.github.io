@@ -1,7 +1,7 @@
 ---
 title: "Fewer Clicks, More Purchases"
 author: "Murat Unal"
-date: '2023-01-06'
+date: '2023-01-07'
 slug: fewer-clicks-more-purchases
 alias:
   - /project/fewer-clicks-more-purchases/
@@ -24,7 +24,7 @@ links:
 - icon: arxiv
   icon_pack: ai
   name: Management Science
-  url: https://arxiv.org/abs/2105
+  url: 
 - icon: github
   icon_pack: fab
   name: code

@@ -24,7 +24,7 @@ links:
 - icon: file-pdf
   icon_pack: fas
   name: PDF
-  url: https://arxiv.org/abs/2105
+  url:
 - icon: github
   icon_pack: fab
   name: code

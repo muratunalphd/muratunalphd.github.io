@@ -1,17 +1,38 @@
 ---
 ## Configure page content in wide column
-title: "Why apéro?" # leave blank to exclude
-number_featured: 1 # pulling from mainSections in config.toml
+title: "Education" # leave blank to exclude
+number_featured: 0 # pulling from mainSections in config.toml
 use_featured: false # if false, use most recent by date
-number_categories: 3 # set to zero to exclude
+number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: |
-  Apéro is a unique kind of casual get-together in French culture, when you gather with friends and get to know each other better over some apéritifs, snacks, and anything in between. A good apéro is one where you'd happily spend a few hours just hanging out.
+  <i class="fas fa-graduation-cap pr2"></i>Ph.D. in Quantitative Marketing &#8729;
+  Cornell University  &#8729;  2022
+
+  <i class="fas fa-graduation-cap pr2"></i>M.S. in Management &#8729;
+  Georgia Tech  &#8729;  2018
   
-  I hope this theme helps you create your own virtual apéro. A place where you and your site's visitors enjoy spending time, and one that helps folks get to know you better. 
-show_outro: true
+  <i class="fas fa-graduation-cap pr2"></i>M.S. in Industrial Engineering  &#8729;
+  Georgia Tech  &#8729;  2015
+  
+  <i class="fas fa-graduation-cap pr2"></i>B.S. in Systems Engineering  &#8729;
+  Turkish Military Academy  &#8729;  2007
+
+  <h2 class="f1 f-headline">Skills</h2>
+  <h3 class="f1 f-headline">Tools & Languages</h3>
+  <i class="fas fa-laptop-code"></i>&nbsp; Python &#8729 R &#8729 SQL
+  <br><br><i class="fas fa-file-code"></i>&nbsp; 
+  Markdown &#8729 Jupyter &#8729 Latex
+  
+    <h3 class="f1 f-headline">Methods</h3>
+  <i class="fas fa-spell-check"></i> &nbsp; Online & Field Experimentation
+  <br><br><i class="fas fa-project-diagram"></i> &nbsp; Supervised & Unsupervised Machine Learning
+  <br><br><i class="fas fa-network-wired"></i> &nbsp; Causal Inference & Causal Machine Learning
+  <br><br><i class="fas fa-layer-group"></i> &nbsp; Deep Learning
+  
+show_outro: false
 outro: |
-  <i class="fas fa-glass-cheers pr2"></i>Sincere thanks to [Maëlle Salmon](https://masalmon.eu/) for her help naming this Hugo theme!
+  
 ---
 
 ** index doesn't contain a body, just front matter above.

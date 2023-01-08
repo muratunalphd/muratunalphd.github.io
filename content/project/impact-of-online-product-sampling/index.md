@@ -4,7 +4,7 @@ author: "Murat Unal"
 date: '2022-12-30'
 slug: impact-of-online-product-sampling
 alias:
-  - /publication/impact-of-online-product-sampling/
+  - /project/impact-of-online-product-sampling/
 categories:
   - Research
   - Marketing
@@ -18,7 +18,7 @@ publishDate: '2023-01-30'
 publication_types:
   - '2'
 publication: 'pdf'
-summary: 'We study how online product sampling as a marketing strategy impacts consumer behavior and the economic value it generates for retailers in e-commerce.'
+summary: 'In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.'
 featured: yes
 links:
 - icon: file-pdf

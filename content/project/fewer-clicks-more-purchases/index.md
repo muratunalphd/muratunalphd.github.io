@@ -1,10 +1,10 @@
 ---
 title: "Fewer Clicks, More Purchases"
 author: "Murat Unal"
-date: '2023-01-30'
+date: '2023-01-06'
 slug: fewer-clicks-more-purchases
 alias:
-  - /publication/fewer-clicks-more-purchases/
+  - /project/fewer-clicks-more-purchases/
 categories:
   - Research
   - Marketing
@@ -18,7 +18,7 @@ publishDate: '2023-01-30'
 publication_types:
   - '2'
 publication: 'pdf'
-summary: 'We study how introducing a 1-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.'
+summary: 'We study how introducing a one-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.'
 featured: yes
 links:
 - icon: arxiv

@@ -3,7 +3,7 @@ theme = "hugo-apero"
 languageCode = "en"
 title = "Murat Unal"
 author = "Murat Unal"
-copyright = "" # set to override the auto generated copyright using org info and now year
+copyright = "2023 Murat Unal" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = "" # see params.utterances to use utterances instead of Disqus
 metaDataFormat = "yaml"
@@ -30,7 +30,7 @@ enableEmoji = true
 [params]
   orgName = ""
   orgLocal = ""
-  description = ""
+  description = "Personal website of Murat Unal"
   favicon = "/img/favicon.ico"
   logo = ""
   mainSections = []
@@ -41,7 +41,7 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/papillons.jpg"
+  sharing_image = "/img/avatar.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = ""
   
@@ -71,8 +71,8 @@ enableEmoji = true
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
     use_utterances = true
-    repo_name = "apreshill/apero"
-    issue_term = "pathname" # url, pathname, or title
+    repo_name = "muratunalphd/muratunalphd.github.io"
+    issue_term = "title" # url, pathname, or title
     theme = "boxy-light"
     label = "comments :crystal_ball:"
 
@@ -107,12 +107,12 @@ enableEmoji = true
   # Configure header 
   [[menu.header]]
     name = "About"
-    title = "About Blogophonic"
+    title = "About"
     url = "/about/"
     weight = 1
   [[menu.header]]
-    name = "Field Notes"
-    title = "Field Notes"
+    name = "Posts"
+    title = "Posts"
     url = "/blog/"
     weight = 2
   [[menu.header]]
@@ -122,7 +122,7 @@ enableEmoji = true
     weight = 3
   [[menu.header]]
     name = "Contact"
-    title = "Contact form"
+    title = "Contact"
     url = "/contact/"
     weight = 4
   # Configure footer  

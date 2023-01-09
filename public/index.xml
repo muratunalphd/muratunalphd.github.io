@@ -6,6 +6,7 @@
     <description>Recent content in Murat Unal, Ph.D. on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>2023 Murat Unal</copyright>
     <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference</title>
@@ -17,6 +18,15 @@
 Let&amp;rsquo;s suppose When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 Create Campaign Data Both stores have same number of members. We can get an unbiased estimate of the population mean spending among customers if the number of treated is the same in both stores.
 Run Simulation Plot Results </description>
+    </item>
+    
+    <item>
+      <title>Fewer Clicks, More Purchases</title>
+      <link>https://muratunalphd.com/project/fewer-clicks-more-purchases/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://muratunalphd.com/project/fewer-clicks-more-purchases/</guid>
+      <description>We study how introducing a one-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.</description>
     </item>
     
     <item>

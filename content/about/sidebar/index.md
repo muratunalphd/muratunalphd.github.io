@@ -5,21 +5,18 @@ role: Economist | Marketing Quant | Data Scientist
 avatar_shape: rounded # circle, square, rounded, leave blank to exclude
 show_social_links: true # specify social accounts in site config
 audio_link_label: "" # leave blank to exclude
-link_list_label: "Interests" # bookmarks, elsewhere, etc.
+link_list_label: "Areas of Expertise" # bookmarks, elsewhere, etc.
 link_list:
-- name: E-commerce
-  url: 
 - name: Targeted Marketing
   url: 
+- name: Digital Marketing
+  url:  
 - name: Customer Experience
+  url:    
+- name: E-commerce
+  url: 
+- name: Profitability Management
   url:   
- 
-# - name: Causal Inference
-#   url: 
-# - name: Causal Machine Learning
-#   url: 
-# - name: Online/Field Experiments
-#   url: 
 
 ---
 

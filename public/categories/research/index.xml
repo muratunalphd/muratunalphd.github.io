@@ -6,7 +6,17 @@
     <description>Recent content in Research on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2023 Murat Unal</copyright>
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fewer Clicks, More Purchases</title>
+      <link>https://muratunalphd.com/project/fewer-clicks-more-purchases/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://muratunalphd.com/project/fewer-clicks-more-purchases/</guid>
+      <description>We study how introducing a one-step checkout algorithm impacts consumer behavior and the economic value it generates for retailers in e-commerce.</description>
+    </item>
+    
     <item>
       <title>The Impact of Online Product Sampling on Customer Behavior</title>
       <link>https://muratunalphd.com/project/impact-of-online-product-sampling/</link>

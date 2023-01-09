@@ -6,11 +6,21 @@
     <description>Recent content in Tags on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2023 Murat Unal</copyright>
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1-click</title>
+      <link>https://muratunalphd.com/tags/1-click/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://muratunalphd.com/tags/1-click/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>causal inference</title>
       <link>https://muratunalphd.com/tags/causal-inference/</link>
-      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://muratunalphd.com/tags/causal-inference/</guid>
       <description></description>
@@ -19,7 +29,7 @@
     <item>
       <title>causal machine learning</title>
       <link>https://muratunalphd.com/tags/causal-machine-learning/</link>
-      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://muratunalphd.com/tags/causal-machine-learning/</guid>
       <description></description>

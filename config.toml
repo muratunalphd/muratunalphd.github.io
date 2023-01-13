@@ -97,7 +97,10 @@ enableEmoji = true
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/muratunalphd/"
- 
+ [[params.social]]
+      icon      = "medium" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://www.medium.com/in/@murat.unal/"
 [taxonomies]
   category = "categories"
   series = "series"

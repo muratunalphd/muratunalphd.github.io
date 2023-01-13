@@ -2,7 +2,7 @@
 action_label: Learn More About Me &rarr;
 action_link: /about
 action_type: text
-description: I am an Economist, Marketing Quant and Data Scientist. My areas of expertise inclue targeted marketing, profitability management and improving the customer experience in online marketplaces. I solve challenging business problems in these areas by designing and analyzing experiments, applying causal inference, machine learning as well as causal machine learning methods.
+description: I am an Economist and Marketing Data Scientist. My areas of expertise inclue targeted marketing, profitability management and improving the customer experience in online marketplaces. I solve challenging business problems in these areas by designing and analyzing experiments, applying causal inference, machine learning as well as causal machine learning methods.
 
 image_left: false
 images:

@@ -9,15 +9,13 @@
     <copyright>2023 Murat Unal</copyright>
     <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference</title>
+      <title>An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference</title>
       <link>https://muratunalphd.com/blog/ipw-intuition/</link>
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://muratunalphd.com/blog/ipw-intuition/</guid>
-      <description>One mistake I come across repeatedly in campaign measurement is the following:
-Let&amp;rsquo;s suppose When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
-Create Campaign Data Both stores have same number of members. We can get an unbiased estimate of the population mean spending among customers if the number of treated is the same in both stores.
-Run Simulation Plot Results </description>
+      <description>One of the well-established methods for causal inference is based on the Inverse Propensity Weighting (IPW). In this post we will use a simple example to build an intuition for IPW. Specifically, we will see how IPW is derived from a simple weighted average in order to account for varying treatment assignment rates in causal evaluation.
+Let’s consider the simple example where we want to estimate the average effect of running a marketing coupon campaign on customer spending.</description>
     </item>
     
   </channel>

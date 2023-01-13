@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Causal Inference on Murat Unal</title>
-    <link>https://muratunalphd.com/categories/causal-inference/</link>
-    <description>Recent content in Causal Inference on Murat Unal</description>
+    <title>Marketing Data Science on Murat Unal</title>
+    <link>https://muratunalphd.com/categories/marketing-data-science/</link>
+    <description>Recent content in Marketing Data Science on Murat Unal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>2023 Murat Unal</copyright>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/causal-inference/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://muratunalphd.com/categories/marketing-data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference</title>
       <link>https://muratunalphd.com/blog/ipw-intuition/</link>
@@ -16,15 +16,6 @@
       <guid>https://muratunalphd.com/blog/ipw-intuition/</guid>
       <description>One of the well-established methods for causal inference is based on the Inverse Propensity Weighting (IPW). In this post we will use a simple example to build an intuition for IPW. Specifically, we will see how IPW is derived from a simple weighted average in order to account for varying treatment assignment rates in causal evaluation.
 Let’s consider the simple example where we want to estimate the average effect of running a marketing coupon campaign on customer spending.</description>
-    </item>
-    
-    <item>
-      <title>The Impact of Online Product Sampling on Customer Behavior</title>
-      <link>https://muratunalphd.com/project/impact-of-online-product-sampling/</link>
-      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://muratunalphd.com/project/impact-of-online-product-sampling/</guid>
-      <description>In this study we show how online product sampling as a marketing strategy impacts consumer behavior and quantify the economic value it generates for retailers in e-commerce.</description>
     </item>
     
   </channel>

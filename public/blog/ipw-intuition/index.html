@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.109.0">
-<title>An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference | Murat Unal</title>
+<title>An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference | Murat Unal</title>
 
 
 
@@ -21,12 +21,12 @@
   
     
   
-<meta name="description" content="Example for using IPW">
+<meta name="description" content="Understanding the roots of Inverse Propensity Weighting through a simple example.">
 
 
 <meta property="og:site_name" content="Murat Unal">
-<meta property="og:title" content="An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference | Murat Unal">
-<meta property="og:description" content="Example for using IPW" />
+<meta property="og:title" content="An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference | Murat Unal">
+<meta property="og:description" content="Understanding the roots of Inverse Propensity Weighting through a simple example." />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="https://muratunalphd.com/blog/ipw-intuition/" />
 <meta property="og:locale" content="en">
@@ -40,13 +40,11 @@
         <meta name="twitter:image" content="https://muratunalphd.com/blog/ipw-intuition/featured.png" >
     
     
-  <meta itemprop="name" content="An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference">
-<meta itemprop="description" content="One mistake I come across repeatedly in campaign measurement is the following:
-Let&rsquo;s suppose When $a \ne 0$, there are two solutions to $(ax^2 &#43; bx &#43; c = 0)$ and they are
-Create Campaign Data Both stores have same number of members. We can get an unbiased estimate of the population mean spending among customers if the number of treated is the same in both stores.
-Run Simulation Plot Results "><meta itemprop="datePublished" content="2023-01-07T00:00:00+00:00" />
+  <meta itemprop="name" content="An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference">
+<meta itemprop="description" content="One of the well-established methods for causal inference is based on the Inverse Propensity Weighting (IPW). In this post we will use a simple example to build an intuition for IPW. Specifically, we will see how IPW is derived from a simple weighted average in order to account for varying treatment assignment rates in causal evaluation.
+Let’s consider the simple example where we want to estimate the average effect of running a marketing coupon campaign on customer spending."><meta itemprop="datePublished" content="2023-01-07T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-01-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="71"><meta itemprop="image" content="https://muratunalphd.com/blog/ipw-intuition/featured.png">
+<meta itemprop="wordCount" content="1756"><meta itemprop="image" content="https://muratunalphd.com/blog/ipw-intuition/featured.png">
 <meta itemprop="keywords" content="" />
   
   
@@ -101,51 +99,274 @@ Run Simulation Plot Results "><meta itemprop="datePublished" content="2023-01-07
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph4-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">An Intuitive Explanation for Inverse Probability of Treatment Weighting in Causal Inference</h1>
-        
-        <p class="f6 measure lh-copy mv1">By Murat Unal in <a href="https://muratunalphd.com/categories/causal-inference">Causal Inference</a>  <a href="https://muratunalphd.com/categories/marketing">Marketing</a> </p>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">An Intuitive Explanation for Inverse Propensity Weighting in Causal Inference</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Understanding the roots of Inverse Propensity Weighting through a simple example.</h4>
+        <p class="f6 measure lh-copy mv1">By Murat Unal in <a href="https://muratunalphd.com/categories/causal-inference">Causal Inference</a>  <a href="https://muratunalphd.com/categories/marketing-data-science">Marketing Data Science</a> </p>
         <p class="f7 db mv0 ttu">January 7, 2023</p>
 
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/muratunalphd/blog-posts" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
+
+
+      </div>
       
 
       </header>
       <section class="post-body pt5 pb4">
-        <p>One mistake I come across repeatedly in campaign measurement is the following:</p>
-<p>Let&rsquo;s suppose When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are</p>
+        
 
 
+<p>One of the well-established methods for causal inference is based on the Inverse Propensity Weighting (IPW). In this post we will use a simple example to build an intuition for IPW. Specifically, we will see how IPW is derived from a simple weighted average in order to account for varying treatment assignment rates in causal evaluation.</p>
+<p>Let’s consider the simple example where we want to estimate the average effect of running a marketing coupon campaign on customer spending. We run the campaign in two stores by randomly assigning a coupon to existing customers. Suppose both stores have same number of customers and, unknown to us, spending among treated customers is distributed as <span class="math inline">\(N(20,3^2)\)</span> and <span class="math inline">\(N(40,3^2)\)</span> in stores 1 and 2, respectively.</p>
+<p>Throughout the example <span class="math inline">\(Y_i(1)\)</span> represents an individual’s spending if they receive a coupon, <span class="math inline">\(T_i=1\)</span>, and <span class="math inline">\(Y_i(0)\)</span> represents their spending if they don’t, <span class="math inline">\(T_i=0\)</span>. These random variables are called potential outcomes. The observed outcome <span class="math inline">\(Y_i\)</span> is related to potential outcomes as follows:</p>
+<p><span class="math display">\[Y_i = Y_i(1)T_i + Y_i(0)(1-T_i)\]</span></p>
+<p>Our estimand, the thing that we want to estimate, is the population mean spending given a coupon, <span class="math inline">\(E[Y_i(1)]\)</span>. If we randomly assign coupons to the same number of customers in both stores, we can get an unbiased estimate of this by simply averaging the observed spending of the treated customers, which is <span class="math inline">\(0.5*\$20 + 0.5*\$40 = \$30\)</span>.</p>
+<p>Mathematically, this looks as follows:</p>
+<p><span class="math display">\[\begin{align*}E[Y_i|T_i=1] &amp;= E[Y_i(1)T_i + Y_i(0)(1-T_i)|T_i=1]\\
+                             &amp;= E[Y_i(1)|T_i=1]\\
+                             &amp;= E[Y_i(1)]
+\end{align*}\]</span>
+where the first line is due to the potential outcomes, and the third line follows from random assignment of treatment, which makes potential outcomes independent of treatment assignment. <span class="math display">\[Y_i(1), Y_i(0) \perp T_i\]</span></p>
+<div id="simple-average" class="section level3">
+<h3>Simple Average</h3>
+<p>Let’s define a function that generates a sample of <span class="math inline">\(2000\)</span> customers, randomly assigns <span class="math inline">\(50%\)</span> of them to treatment in both stores, and records their average spending. Let’s also run a simulation that calls this function for <span class="math inline">\(1000\)</span> times.</p>
+<pre class="python"><code>def run_campaign(biased=False):
+    true_mu1treated , true_mu2treated = 20 , 40
+    n, p , obs = 1, .5 , 2000 # number of trials, probability of each trial, 
+                              # number of observations
+    store = np.random.binomial(n, p, obs)+1
+    df = pd.DataFrame({&#39;store&#39;:store})
 
+    probtreat1 = .5
+    if biased:
+        probtreat2 = .9
+    else:
+        probtreat2 = .5
+    
+    treat = lambda x: int(np.random.binomial(1, probtreat1, 1))\
+                   if x==1 else int(np.random.binomial(1, probtreat2, 1)) 
+    
+    spend = lambda x: float(np.random.normal(true_mu1treated, 3, 1))\
+                   if (x[0]==1 and x[1]==1)\
+                   else ( float(np.random.normal(true_mu2treated, 3, 1) ) )
 
-<h2 id="create-campaign-data">Create Campaign Data
-  <a href="#create-campaign-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h2>
-<p>Both stores have same number of members. We can get an unbiased estimate of the population mean spending among customers if the number of treated is the same in both stores.</p>
+    df[&#39;treated&#39;] = df[&#39;store&#39;].apply(treat)
+    df[&#39;spend&#39;] = df[[&#39;store&#39;,&#39;treated&#39;]].apply(tuple,1).apply(spend)
+    
+    simple_value_treated = np.mean(df.query(&#39;treated==1&#39;)[&#39;spend&#39;])
+        
+    return [simple_value_treated]</code></pre>
+<pre class="python"><code>sim = 1000
+values = Parallel(n_jobs=4)(delayed(run_campaign)() for _ in tqdm(range(sim)))
+results_df = pd.DataFrame(values, columns=[&#39;simple_treat&#39;])</code></pre>
+<p>The following plot shows us that the distribution of the average spending is centered around the true mean.</p>
+<p><img src="HistSimple.png" /></p>
+<p>Now, suppose for some reason the second store assigned coupons to <span class="math inline">\(90\%\)</span> of the customers, whereas the first store assigned it to <span class="math inline">\(50\%\)</span>. What happens if we ignore this and use the same approach as previously and take an average of all treated customers’ spending? Because customers of the second store have a higher treatment rate, their average spending will take a larger weight in our estimate and thereby result in an upward bias.</p>
+<p>In other words, we no longer have a truly randomized experiment because the probability of receiving a coupon now depends on the store. Moreover, because treated customers in the two stores also have substantially different spending on average, the store a customer belongs to is a confounding variable in causal inference speak.</p>
+<p>Mathematically, if we use the simple average spending of treated customers, this time, instead of having this:</p>
+<p><span class="math display">\[\begin{align*}E[Y_i|T_i=1] = E[Y_i(1)|T_i=1]= E[Y_i(1)]
+\end{align*}\]</span></p>
+<p>we end up with this:</p>
+<p><span class="math display">\[\begin{align*}E[Y_i|T_i=1] = E[Y_i(1)|T_i=1]&gt; E[Y_i(1)]
+\end{align*}\]</span></p>
+<p>Indeed, repeating the simulation and plotting the results, we see that the distribution of the average spending is now centered far from the true mean.</p>
+<pre class="python"><code>sim = 1000
+values = Parallel(n_jobs=4)(delayed(run_campaign)(biased=True) for _ in tqdm(range(sim)))
+results_df = pd.DataFrame(values, columns=[&#39;simple_treat&#39;])</code></pre>
+<p><img src="HistSimpleBiased.png" /></p>
+</div>
+<div id="weighted-average" class="section level3">
+<h3>Weighted Average</h3>
+<p>All is not lost, however. Since we know that our experiment was messed up because assignment rates were different between stores,
+we can correct it by taking a weighted average of treated customers’ spending, where weights represent the proportion of customers in each store. This means, we can reclaim random assignment of treatment once we condition on the store information,</p>
+<p><span class="math display">\[Y_i(1), Y_i(0) \perp T_i|X_i\]</span>
+where <span class="math inline">\(X_i \in \lbrace{S_1,S_2\rbrace}\)</span> represents store membership of customer <span class="math inline">\(i\)</span>, and obtain unbiased estimates of our causal estimand, <span class="math inline">\(E[Y_i(1)]\)</span>.</p>
+<p>The math now works as follows:</p>
+<p><span class="math display">\[\begin{align*}E[Y_i(1)] =&amp; E[E[Y_i(1)|X_i]]\\
+                          =&amp; E[E[Y_i(1)|T_i=1,X_i]]\\
+                          =&amp; E[Y_i|T_i=1,X_i=S_1] p(X_i=S_1)+\\
+                          &amp; E[Y_i|T_i=1,X_i=S_2] p(X_i=S_2)
+\end{align*}\]</span></p>
+<p>where the first equation is due to the law of iterated expectations and the second one is due to conditional independence.</p>
+<p>Let <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> denote the number of customers in both stores. Similarly, let <span class="math inline">\(n_{1T}\)</span> and <span class="math inline">\(n_{2T}\)</span> represent the number of treated customers in both stores. Then the above estimator can be computed from the data as follows:</p>
+<p><span class="math display">\[\begin{equation} \underbrace{(\frac{n_1}{n})}_{\text{Prop. of cust. in }S_1}  \underbrace{\frac{1}{n_{1T}}\sum_{i \in S_{1}, i \in T} Y_i}_{\text{Mean spending of treated in }S_1} + \underbrace{(\frac{n_2}{n})}_{\text{Prop. of cust. in }S_2} \underbrace{\frac{1}{n_{2T}}\sum_{i \in S_{2}, i \in T} Y_i}_{\text{Mean spending of treated in }S_2} \end{equation}\]</span></p>
+<p>Sure enough, if we repeat the previous sampling process</p>
+<pre class="python"><code>def run_campaign2():
+    true_mu1treated , true_mu2treated = 20, 40
 
+    n, p , obs = 1, .5 , 2000 # number of trials, probability of each trial, 
+                              # number of observations
+    store = np.random.binomial(n, p, obs)+1
+    df = pd.DataFrame({&#39;store&#39;:store})
 
+    probtreat1 = .5
+    probtreat2 = .9
+    
+    treat = lambda x: int(np.random.binomial(1, probtreat1, 1)) 
+                   if x==1 else int(np.random.binomial(1, probtreat2, 1)) 
+    
+    spend = lambda x: float(np.random.normal(true_mu1treated, 3, 1)) 
+                   if (x[0]==1 and x[1]==1) 
+                   else ( float(np.random.normal(true_mu2treated, 3, 1) ) )
 
+    df[&#39;treated&#39;] = df[&#39;store&#39;].apply(treat)
+    df[&#39;spend&#39;] = df[[&#39;store&#39;,&#39;treated&#39;]].apply(tuple,1).apply(spend)
+    
+    simple_value_treated = np.mean(df.query(&#39;treated==1&#39;)[&#39;spend&#39;])
+    
+    prob1 = df.query(&#39;store==1&#39;).shape[0]/df.shape[0]
+    prob2 = df.query(&#39;store==2&#39;).shape[0]/df.shape[0]
+    
+    est_mu1treated = np.mean(df.query(&#39;treated==1 &amp; store==1&#39;)[&#39;spend&#39;])
+    est_mu2treated = np.mean(df.query(&#39;treated==1 &amp; store==2&#39;)[&#39;spend&#39;])
 
-<h2 id="run-simulation">Run Simulation
-  <a href="#run-simulation"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h2>
+    weighted_value_treated = prob1*est_mu1treated + prob2*est_mu2treated
+    
+    return [simple_value_treated, weighted_value_treated]
+</code></pre>
+<pre class="python"><code>sim=1000
+values = Parallel(n_jobs=4)(delayed(run_campaign2)() for _ in tqdm(range(sim)) )
+results_df = pd.DataFrame(values, columns=[&#39;simple_treat&#39;,&#39;weighted_treat&#39;])</code></pre>
+<p>we see that the average of weighted averages is again right on the true mean.</p>
+<p><img src="HistWeightedVsSimple.png" />
+Let’s now do some algebraic manipulation by rewriting the mean spending in store 1:</p>
+<p><span class="math display">\[\frac{1}{n_{1T}}\sum_{i \in S_{1}, i \in T} Y_i = \frac{1}{n_1} \sum_{i \in S_{1}, i \in T} \frac{Y_i}{(n_{1T}/n_1)} = \frac{1}{n_1} \sum_{i \in S_{1}} \frac{T_i }{(n_{1T}/n_1)}Y_i\]</span>
+Doing the same for store 2 and plugging them back into (1) we have the following:</p>
+<p><span class="math display">\[\begin{equation}(\frac{n_1}{n})\frac{1}{n_1} \sum_{i \in S_{1}} \frac{T_i }{(n_{1T}/n_1)}Y_i  + (\frac{n_2}{n}) \frac{1}{n_{2}}\sum_{i \in S_{2}} \frac{T_i }{(n_{2T}/n_2)}Y_i\end{equation}\]</span>
+Denote the proportion of treated customers in store 1 as <span class="math inline">\(p(S_{1i}) = (n_{1T}/n_1)\)</span> and similarly for store 2, then we can simplify (2) into:</p>
+<p><span class="math display">\[ \begin{equation}\frac{1}{n} \sum^n_{i=1}\frac{T_i}{p(X_i)}Y_i \end{equation}\]</span>, where <span class="math inline">\(p(X_i)\)</span> is the probability of receiving treatment conditional on the confounding variable, aka <strong>the propensity score</strong>,</p>
+<p><span class="math display">\[p(X_i) = P[T_i = 1 |X_i]\]</span></p>
+<p>Notice, we started with one weighted average and ended up with just another weighted average that uses <span class="math inline">\(\frac{T_i}{p(X_i)}\)</span> as weights. This is the well-known <strong>inverse propensity weighted estimator</strong>.</p>
+<p>Running the previous analysis with this estimator</p>
+<pre class="pyhton"><code>def run_campaign3():
+    true_mu1treated , true_mu2treated = 20, 40
 
+    n, p , obs = 1, .5 , 2000 # number of trials, probability of each trial, number of observations
+    store = np.random.binomial(n, p, obs)+1
+    df = pd.DataFrame({&#39;store&#39;:store})
 
+    probtreat1 = .5
+    probtreat2 = .9
+    
+    treat = lambda x: int(np.random.binomial(1, probtreat1, 1)) 
+                   if x==1 else int(np.random.binomial(1, probtreat2, 1)) 
+    
+    spend = lambda x: float(np.random.normal(true_mu1treated, 3, 1)) 
+                   if (x[0]==1 and x[1]==1) 
+                   else ( float(np.random.normal(true_mu2treated, 3, 1) ) )
 
+    df[&#39;treated&#39;] = df[&#39;store&#39;].apply(treat)
+    df[&#39;spend&#39;] = df[[&#39;store&#39;,&#39;treated&#39;]].apply(tuple,1).apply(spend)
+    
+    prob1 = df.query(&#39;store==1&#39;).shape[0]/df.shape[0]
+    prob2 = df.query(&#39;store==2&#39;).shape[0]/df.shape[0]
+    
+    simple_value_treated = np.mean(df.query(&#39;treated==1&#39;)[&#39;spend&#39;])
+    
+    #estimate propensity score:
+    ps1 = df.query(&#39;treated==1 &amp; store==1&#39;).shape[0]/df.query(&#39;store==1&#39;).shape[0]
+    ps2 = df.query(&#39;treated==1 &amp; store==2&#39;).shape[0]/df.query(&#39;store==2&#39;).shape[0]
 
-<h2 id="plot-results">Plot Results
-  <a href="#plot-results"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h2>
-<p><img src="HistTreated.png" alt="png"></p>
-<p><img src="HistControl.png" alt="png"></p>
-<p><img src="HistEffect.png" alt="png"></p>
+    df[&#39;ps&#39;] = pd.Series(np.where(df[&#39;store&#39;]==1, ps1, ps2))
+
+    ipw_value_treated = np.mean( (df[&#39;spend&#39;]*df[&#39;treated&#39;])/df[&#39;ps&#39;])
+    
+    return [simple_value_treated, ipw_value_treated]</code></pre>
+<pre class="python"><code>sim=1000
+values = Parallel(n_jobs=4)(delayed(run_campaign3)() for _ in tqdm(range(sim)) )
+results_df = pd.DataFrame(values, columns=[&#39;simple_treat&#39;,&#39;ipw_treat&#39;])</code></pre>
+<p>give us the same unbiased estimate as before.</p>
+<p><img src="featured.png" /></p>
+</div>
+<div id="estimating-the-average-treatment-effect" class="section level3">
+<h3>Estimating the Average Treatment Effect</h3>
+<p>Now, our ultimate goal is to learn the average incremental spending that the marketing campaign has generated, aka the average treatment effect. To do that we need to also estimate the the population mean spending not given a coupon, <span class="math inline">\(E[Y_i(0)]\)</span> and compare it against <span class="math inline">\(E[Y_i(1)]\)</span>. Our estimand is now this:</p>
+<p><span class="math display">\[\tau = E[Y_i(1)] - E[Y_i(0)] \]</span>
+Towards this, first we repeat the same argument for non-treated and obtain an unbiased estimate for <span class="math inline">\(E[Y_i(0)]\)</span> as follows:</p>
+<p><span class="math display">\[ \begin{equation*}\frac{1}{n} \sum^n_{i=1}\frac{(1-T_i)}{1-p(X_i)}Y_i \end{equation*}\]</span>
+and finally combine them into estimating <span class="math inline">\(\tau\)</span>:</p>
+<p><span class="math display">\[\hat{\tau} = \frac{1}{n} \sum^n_{i=1}\frac{T_i}{p(X_i)}Y_i - \frac{1}{n} \sum^n_{i=1}\frac{(1-T_i)}{1-p(X_i)}Y_i\]</span></p>
+<p>Let’s now extend our previous analysis into estimating the impact of the campaign. Suppose spending among non-treated customers is distributed as <span class="math inline">\(N(10,2^2)\)</span> and <span class="math inline">\(N(30,2^2)\)</span> in stores 1 and 2, respectively, so that the true effect of the campaign is <span class="math inline">\(\$10\)</span> in both stores, and therefore we have <span class="math inline">\(\tau = \$10\)</span>.</p>
+<pre class="python"><code>def run_campaign4():
+    true_mu1treated , true_mu2treated = 20, 40
+    true_mu1control , true_mu2control = 10, 10
+    n, p , obs = 1, .5 , 2000 # number of trials, probability of each trial, number of observations
+    store = np.random.binomial(n, p, obs)+1
+    df = pd.DataFrame({&#39;store&#39;:store})
+    probtreat1 = .5
+    probtreat2 = .9
+    
+    treat = lambda x: int(np.random.binomial(1, probtreat1, 1)) 
+                   if x==1 else int(np.random.binomial(1, probtreat2, 1)) 
+    
+    spend = lambda x: float(np.random.normal(true_mu1treated, 3, 1)) 
+                   if (x[0]==1 and x[1]==1) 
+                   else ( float(np.random.normal(true_mu2treated, 3, 1) ) 
+                   if  (x[0]==2 and x[1]==1)   
+                   else (float(np.random.normal(true_mu1control, 2, 1) ) 
+                   if  (x[0]==1 and x[1]==0)  
+                    else  float(np.random.normal(true_mu2control, 2, 1)) )
+                                                                                    
+    df[&#39;treated&#39;] = df[&#39;store&#39;].apply(treat)
+    df[&#39;spend&#39;] = df[[&#39;store&#39;,&#39;treated&#39;]].apply(tuple,1).apply(spend)
+    
+    prob1 = df.query(&#39;store==1&#39;).shape[0]/df.shape[0]
+    prob2 = df.query(&#39;store==2&#39;).shape[0]/df.shape[0]
+    
+    simple_value_treated = np.mean(df.query(&#39;treated==1&#39;)[&#39;spend&#39;])
+    simple_value_control = np.mean(df.query(&#39;treated==0&#39;)[&#39;spend&#39;])
+    
+    simple_tau = simple_value_treated - simple_value_control
+    
+    est_mu1treated = np.mean(df.query(&#39;treated==1 &amp; store==1&#39;)[&#39;spend&#39;])
+    est_mu2treated = np.mean(df.query(&#39;treated==1 &amp; store==2&#39;)[&#39;spend&#39;])
+    weighted_value_treated = prob1*est_mu1treated + prob2*est_mu2treated
+        
+    est_mu1control = np.mean(df.query(&#39;treated==0 &amp; store==1&#39;)[&#39;spend&#39;])
+    est_mu2control = np.mean(df.query(&#39;treated==0 &amp; store==2&#39;)[&#39;spend&#39;])
+    
+    weighted_value_control = prob1*est_mu1control + prob2*est_mu2control
+    weighted_tau = weighted_value_treated - weighted_value_control
+    
+    #estimate propensity score:
+    ps1 = df.query(&#39;treated==1 &amp; store==1&#39;).shape[0]/df.query(&#39;store==1&#39;).shape[0]
+    ps2 = df.query(&#39;treated==1 &amp; store==2&#39;).shape[0]/df.query(&#39;store==2&#39;).shape[0]
+    
+    df[&#39;ps&#39;] = pd.Series(np.where(df[&#39;store&#39;]==1, ps1, ps2))
+    
+    ipw_value_treated = np.mean( (df[&#39;spend&#39;]*df[&#39;treated&#39;])/df[&#39;ps&#39;])
+    ipw_value_control = np.mean( (df[&#39;spend&#39;]*(1-df[&#39;treated&#39;]) )/(1-df[&#39;ps&#39;] ))
+    ipw_tau = ipw_value_treated - ipw_value_control
+    
+    return [simple_tau, weighted_tau, ipw_tau]</code></pre>
+<pre class="python"><code>sim=1000
+values = Parallel(n_jobs=4)(delayed(run_campaign4)() for _ in tqdm(range(sim)) )
+results_df = pd.DataFrame(values, columns=[&#39;simple_tau&#39;,&#39;weighted_tau&#39;,&#39;ipw_tau&#39;])</code></pre>
+<p>As shown below, both the weighted average and the IPW estimator are centered around the true effect of <span class="math inline">\(\$20\)</span>, whereas the distribution of the simple average without controlling for store membership is centered around <span class="math inline">\(\$23\)</span>, <span class="math inline">\(\%15\)</span> larger than the true effect.</p>
+<p><img src="HistEffect.png" /></p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>The IPW estimator has a long history in causal inference. The goal of this post was to develop an intuition for this well-known estimator through a simple example. Using a marketing case we have seen that the hallmark of this method is to correct for unequal treatment assignment mechanisms. Moreover, we have shown that the method is an extension of the weighted average estimator.</p>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>[1] Richard K. Crump, V. Joseph Hotz, Guido W. Imbens, Oscar A. Mitnik. <a href="https://academic.oup.com/biomet/article-abstract/96/1/187/235329?redirectedFrom=fulltext&amp;login=false">Dealing with limited overlap in estimation of average treatment effects.</a> (2009), <em>Biometrika</em>.</p>
+<p>[2] Stefan Wager, <a href="https://web.stanford.edu/~swager/stats361.pdf">Stats 361: Causal Inference</a> (Spring 2020), <em>Stanford University</em>.</p>
+</div>
 
         
         <details closed class="f6 fw7 input-reset">
@@ -155,12 +376,12 @@ Run Simulation Plot Results "><meta itemprop="datePublished" content="2023-01-07
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">1 minute read, 71 words</dd>
+    <dd class="fw5 ml0">9 minute read, 1756 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categories:</dt>
-    <dd class="fw5 ml0"> <a href="https://muratunalphd.com/categories/causal-inference">Causal Inference</a>  <a href="https://muratunalphd.com/categories/marketing">Marketing</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://muratunalphd.com/categories/causal-inference">Causal Inference</a>  <a href="https://muratunalphd.com/categories/marketing-data-science">Marketing Data Science</a> </dd>
   </dl>
   
   
@@ -259,6 +480,21 @@ Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xml
     
     <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/muratunalphd/" title="linkedin" target="_blank" rel="me noopener">
       <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.medium.com/in/@murat.unal/" title="medium" target="_blank" rel="me noopener">
+      <i class="fab fa-medium fa-lg fa-fw"></i>
     </a>
   
 </div>
